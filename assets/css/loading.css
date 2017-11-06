@@ -1,0 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin-top: 250px;
+}
+
+.wrapper {
+	width: 70%;
+	margin: auto;
+}
+
+h5 {
+	padding-bottom: 20px;
+}

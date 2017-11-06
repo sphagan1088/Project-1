@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 55px 20px;
+}
+
+.container {
+	width: 82%;
+}
+
+h1 {
+	font-weight: 600;
+	font-size: 70px;
+	margin-top: 8px;
+	font-family: 'Lobster', 'Roboto', sans-serif;
+}
+
+h4 {
+	font-weight: 700;
+	font-family: 'Montserrat';
+}
+
+p {
+	padding-top: 0;
+	margin-top: -10px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 24px;
+	width: 80%;
+}
+
+form {
+	margin-top: 8px;
+}
+
+#file-btn {
+	padding: 0 1.55rem;
+}
+
+#submit {
+	padding: 0 1rem;
+	margin-top: 20px;
+}
+
+a {
+	color: white;
+}
