@@ -6,7 +6,7 @@
 	<title>Project 1</title>
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Open+Sans+Condensed:300,700|Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Open+Sans+Condensed:300,700|Montserrat:400,500,600,700" rel="stylesheet">
 
 	<!-- Materialize CSS -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -31,12 +31,12 @@
 			
 			<div class="col s12 m4 offset-m1" id="header">
 				<h1>Starched</h1>
-				<p>Dressy or messy? We've got your back.</p>
+				<p>The easiest part of the job search should be getting dressed to impress. We're here to help you separate the dressy from the messy.</p>
 			</div>
 			
 			<!-- Form Start -->
 			<form class="col s12 m6">
-				<h4>Enter your info below:</h4>
+				<h4>Give us some background:</h4>
 				<div class="row">
 
 					<!-- Name -->
@@ -56,12 +56,12 @@
 					<!-- Dress Code -->
 					<div class="input-field col s12">
 						<i class="material-icons prefix">wc</i>
-						<select>
+						<select id="dress-code">
 					    	<option value="" disabled selected>Company's dress code</option>
-					      	<option value="formal">Formal</option>
-					      	<option value="business-casual">Business casual</option>
-					      	<option value="casual">Casual</option>
-					      	<option value="unknown">Don't know</option>
+					      	<option value="Formal">Formal</option>
+					      	<option value="Business casual">Business casual</option>
+					      	<option value="Casual">Casual</option>
+					      	<option value="Unknown">Don't know</option>
 					    </select>
 					</div>
 
@@ -80,7 +80,7 @@
 							<input type="file" />
 						</div>
 						<div class="file-path-wrapper">
-				        	<input class="file-path validate" type="text" placeholder="Upload a full-body image of your outfit"/>
+				        	<input id="outfit" class="file-path validate" type="text" placeholder="Upload a full-body image of your outfit"/>
 				      	</div>
 					</div>
 

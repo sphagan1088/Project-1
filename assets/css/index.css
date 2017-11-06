@@ -13,8 +13,9 @@ body {
 h1 {
 	font-weight: 600;
 	font-size: 70px;
-	margin-top: 8px;
+	margin-top: 6px;
 	font-family: 'Lobster', 'Roboto', sans-serif;
+	letter-spacing: 1.5px;
 }
 
 h4 {
@@ -26,30 +27,38 @@ h4 {
 p {
 	padding-top: 0;
 	margin-top: -10px;
+	margin-bottom: -20px;
 	font-family: 'Montserrat';
-	font-weight: bold;
-	font-size: 24px;
+	font-weight: 500;
+	font-size: 16px;
 	width: 80%;
 }
 
 form {
-	margin-top: 8px;
+	margin-top: 25px;
 }
 
+/* valid color */
 #name-input-field input[type=text].valid {
-     border-bottom: 1px solid #b2dfdb;
-     box-shadow: 0 1px 0 0 #b2dfdb;
-   }
+	border-bottom: 1px solid #b2dfdb;
+	box-shadow: 0 1px 0 0 #b2dfdb;
+}
 
+/* valid color */
 #company-input-field input[type=text].valid {
-     border-bottom: 1px solid #80cbc4;
-     box-shadow: 0 1px 0 0 #80cbc4;
-   }
+    border-bottom: 1px solid #80cbc4;
+    box-shadow: 0 1px 0 0 #80cbc4;
+}
 
+/* valid color */
 #industry-input-field input[type=text].valid {
-     border-bottom: 1px solid #4db6ac;
-     box-shadow: 0 1px 0 0 #4db6ac;
-   }
+   	border-bottom: 1px solid #4db6ac;
+    box-shadow: 0 1px 0 0 #4db6ac;
+}
+
+.btn {
+	border-radius: 3px;
+}
 
 #file-btn {
 	padding: 0 1.55rem;
@@ -58,6 +67,7 @@ form {
 
 #submit {
 	padding: 0 1rem;
+	margin-left: 10px;
 	margin-top: 20px;
 	background: #009688;
 }
