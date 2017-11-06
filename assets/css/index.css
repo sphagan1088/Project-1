@@ -20,6 +20,7 @@ h1 {
 h4 {
 	font-weight: 700;
 	font-family: 'Montserrat';
+	font-size: 30px;
 }
 
 p {
@@ -35,13 +36,30 @@ form {
 	margin-top: 8px;
 }
 
+#name-input-field input[type=text].valid {
+     border-bottom: 1px solid #b2dfdb;
+     box-shadow: 0 1px 0 0 #b2dfdb;
+   }
+
+#company-input-field input[type=text].valid {
+     border-bottom: 1px solid #80cbc4;
+     box-shadow: 0 1px 0 0 #80cbc4;
+   }
+
+#industry-input-field input[type=text].valid {
+     border-bottom: 1px solid #4db6ac;
+     box-shadow: 0 1px 0 0 #4db6ac;
+   }
+
 #file-btn {
 	padding: 0 1.55rem;
+	background: #26a69a;
 }
 
 #submit {
 	padding: 0 1rem;
 	margin-top: 20px;
+	background: #009688;
 }
 
 a {
