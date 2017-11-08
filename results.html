@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+
 	<meta charset="UTF-8">
 		
 	<title>Project 1</title>
@@ -20,20 +21,22 @@
 	<!-- Mobile responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	
 </head>
 <body>
 
 	<!-- RESPONSE PAGE (FORMAL) -->
-
+	
+	<!-- Button to go back to landing page -->
 	<a href="./index.html"><button id="back-btn" class="btn right tooltipped z-depth-0" data-position="left" data-delay="10" data-tooltip="Try out another outfit" data-tooltip-id="5f348ca7-14d2-6cb5-ce85-fedc730c9f38"><i class="material-icons">refresh</i></button></a>
 	
 	<div class="container">
 		
+		<!-- Result Header -->
 		<div class="row">
 			<h1>Result: <span id="outfit-result">Formal</span></h1>
 		</div>
 		
+		<!-- Content -->
 		<div class="card-panel">
 			<div class="row">
 				<div class="col s12 m4" id="img-div">
@@ -52,13 +55,16 @@
 					    </div>
 					</div>
 
-					<!-- user's image here -->
-					<img class="responsive-img" id="outfit-img" src="http://via.placeholder.com/500x850" alt="placeholder">
+					<!-- User's Image Here -->
+					<div id="img-div">
+						<img class="responsive-img" id="outfit-img" src="http://via.placeholder.com/500x850" alt="placeholder">
+					</div>
 
 				</div>
-			
+				
+				<!-- Table for User Data -->
 				<div class="col s12 m7 offset-m1">
-					<table class="highlight">
+					<table class="highlight responsive-table">
 						<thead>
 							<tr>
 								<th>Name</th>
@@ -71,7 +77,8 @@
 						<tbody></tbody>
 					</table>
 				</div>
-					
+				
+				<!-- Google Maps Embed API -->
 				<iframe
 					class="col s12 responsive-iframe"
 					width="600"
@@ -81,19 +88,20 @@
 				    &q=clothing+stores+near+me" allowfullscreen>
 				</iframe>
 				
+				<!-- Interview Resources -->
 				<div class="row">
-				<div class="col s12" id="resources">
-					<p>Psst...make sure to check out these helpful resources!</p>
-					<ul>
-						<li><a href="https://www.forbes.com/sites/jonyoushaei/2014/10/20/12-surprising-job-interview-tips/#5079284e50f4">12 Surprising Job Interview Tips</a></li>
-						<li><a href="https://www.forbes.com/sites/jacquelynsmith/2013/01/11/how-to-ace-the-50-most-common-interview-questions/#3189bc764624">How to Ace the 50 Most Common Interview Questions</a></li>
-						<li><a href="https://www.forbes.com/sites/quora/2017/11/03/9-interview-tips-that-will-help-you-land-the-job/#776925d13153">9 Interview Tips That Will Help You Land the Job</a></li>
-						<li><a href="https://www.reddit.com/r/AskReddit/comments/1cxpq8/what_are_the_dos_and_donts_of_a_job_interview/">What Are the Dos and Don'ts of A Job Interview? </a></li>
-						<li><a href="https://theundercoverrecruiter.com/interviewing-tips-from-hiring-managers/">10 Awesome Interview Tips from Actual Hiring Managers</a></li>
-						<li><a href="https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success">The Ultimate Interview Guide: 30 Prep Tips for Job Interview Success</a></li>
-						<li><a href="https://www.glassdoor.com/blog/reddit-life-pro-tips/">25 Reddit Life Pro Tips That’ll Help You Hack Your Career</a></li>
-					</ul>
-				</div>
+					<div class="col s12" id="resources">
+						<p>Psst...make sure to check out these helpful resources!</p>
+						<ul>
+							<li><a href="https://www.forbes.com/sites/jonyoushaei/2014/10/20/12-surprising-job-interview-tips/#5079284e50f4">12 Surprising Job Interview Tips</a></li>
+							<li><a href="https://www.forbes.com/sites/jacquelynsmith/2013/01/11/how-to-ace-the-50-most-common-interview-questions/#3189bc764624">How to Ace the 50 Most Common Interview Questions</a></li>
+							<li><a href="https://www.forbes.com/sites/quora/2017/11/03/9-interview-tips-that-will-help-you-land-the-job/#776925d13153">9 Interview Tips That Will Help You Land the Job</a></li>
+							<li><a href="https://www.reddit.com/r/AskReddit/comments/1cxpq8/what_are_the_dos_and_donts_of_a_job_interview/">What Are the Dos and Don'ts of A Job Interview? </a></li>
+							<li><a href="https://theundercoverrecruiter.com/interviewing-tips-from-hiring-managers/">10 Awesome Interview Tips from Actual Hiring Managers</a></li>
+							<li><a href="https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success">The Ultimate Interview Guide: 30 Prep Tips for Job Interview Success</a></li>
+							<li><a href="https://www.glassdoor.com/blog/reddit-life-pro-tips/">25 Reddit Life Pro Tips That’ll Help You Hack Your Career</a></li>
+						</ul>
+					</div>
 				</div>
 				
 
@@ -101,7 +109,6 @@
 		</div>
 
 	</div> <!-- /.container -->
-
 
 <!-- jQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -115,7 +122,8 @@
 <!-- JavaScript -->
 <script type="text/javascript" src="./assets/javascript/materialize.js"></script>
 <script type="text/javascript" src="./assets/javascript/submit.js"></script>
-<script type="text/javascript" src="./assets/javascript/results.js"></script>
+<!-- <script type="text/javascript" src="./assets/javascript/results.js"></script> -->
+<script type="text/javascript" src="./assets/javascript/app.js"></script>
 
 </body>
 </html>

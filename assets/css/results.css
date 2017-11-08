@@ -49,7 +49,19 @@ h1 {
 }
 
 table {
-	margin-bottom: 35px;
+	margin-bottom: 85px;
+}
+
+/* flashes new table row on load */
+.flash {
+    animation: flash 3s;
+    animation-iteration-count: 1;
+  }
+
+@keyframes flash {
+    0% { color: none; }
+    50% { color: #039be5; }
+    100% { color: none; }
 }
 
 #resources {
@@ -67,9 +79,9 @@ ul {
 }
 
 a {
-	color: #999;
+	color: #039be5;
 }
 
 a:hover {
-	color: #40c4ff;
+	color: #4fc3f7;
 }
