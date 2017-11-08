@@ -22,7 +22,8 @@ var userOutfit = "";
 
 // FUNCTIONS
 // ====================================================================================
-function submit() {
+function submit(e) {
+	e.preventDefault();
 	userName = $("#name").val();
 	userCompany = $("#company").val();
 	userDressCode = $("#dress-code").val();
@@ -38,7 +39,10 @@ function submit() {
 		timestamp: firebase.database.ServerValue.TIMESTAMP
 	}
 
-	database.ref().push(pushObject);
+	var myKey = database.ref().push(pushObject);
+	//do api call here
+	//when its done append some file params here
+	window.location = "formal.html?id="+myKey.key+ "&dressType=" + resultFromVise;
 }
 
 
