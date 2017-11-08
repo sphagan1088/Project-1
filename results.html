@@ -35,64 +35,54 @@
 		</div>
 		
 		<div class="card-panel">
-		<div class="row">
-			<div class="col s12 m4" id="img-div">
+			<div class="row">
+				<div class="col s12 m4" id="img-div">
 
-				<!-- Modal Trigger -->
-				<a id="modal-btn" class="waves-effect waves-light btn-floating modal-trigger" href="#modal1"><i class="material-icons">sentiment_very_satisfied</i></a>
-				<!-- clear_all, crop_free, menu, add, donut_large, insert_emoticon, more_horiz -->
+					<!-- Modal Trigger -->
+					<a id="modal-btn" class="waves-effect waves-light btn-floating modal-trigger" href="#modal1"><i class="material-icons">sentiment_very_satisfied</i></a>
+					<!-- clear_all, crop_free, menu, add, donut_large, insert_emoticon, more_horiz -->
 
-				<!-- Modal Structure -->
-				<div id="modal1" class="modal">
-				    <div class="modal-content">
-				    	<p>Sweet! <!-- <i class="material-icons">pan_tool</i> --> Rock this outfit at your next interview, and you'll be sure to impress. Good luck!</p>
-				    </div>
-				    <div class="modal-footer">
-				      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
-				    </div>
+					<!-- Modal Structure -->
+					<div id="modal1" class="modal">
+					    <div class="modal-content">
+					    	<p>Sweet! <!-- <i class="material-icons">pan_tool</i> --> Rock this outfit at your next interview, and you'll be sure to impress. Good luck!</p>
+					    </div>
+					    <div class="modal-footer">
+					      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
+					    </div>
+					</div>
+
+					<!-- user's image here -->
+					<img class="responsive-img" id="outfit-img" src="http://via.placeholder.com/500x850" alt="placeholder">
+
 				</div>
-
-				<!-- user's image here -->
-				<img class="responsive-img" id="outfit-img" src="http://via.placeholder.com/500x850" alt="placeholder">
-
-			</div>
-		
-			<div class="col s12 m7 offset-m1">
-				<table class="highlight">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Company</th>
-							<th>Dress Code</th>
-							<th>Industry</th>
-							<th>Outfit Result</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Name</td>
-							<td>Company</td>
-							<td>Dress Code</td>
-							<td>Industry</td>
-							<td>Outfit Result</td>
-						</tr>
-						<tr>
-							<td>Name</td>
-							<td>Company</td>
-							<td>Dress Code</td>
-							<td>Industry</td>
-							<td>Outfit Result</td>
-						</tr>
-						<tr>
-							<td>Name</td>
-							<td>Company</td>
-							<td>Dress Code</td>
-							<td>Industry</td>
-							<td>Outfit Result</td>
-						</tr>
-					</tbody>
-				</table>
-
+			
+				<div class="col s12 m7 offset-m1">
+					<table class="highlight">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Company</th>
+								<th>Dress Code</th>
+								<th>Industry</th>
+								<th>Outfit Result</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+					
+				<iframe
+					class="col s12 responsive-iframe"
+					width="600"
+				  	height="450"
+				  	frameborder="0" style="border:0"
+				  	src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBXp5DuWNEBz3mzlXXzfAlVk5rS-ocV6vM
+				    &q=clothing+stores+near+me" allowfullscreen>
+				</iframe>
+				
+				<div class="row">
+				<div class="col s12" id="resources">
 					<p>Psst...make sure to check out these helpful resources!</p>
 					<ul>
 						<li><a href="https://www.forbes.com/sites/jonyoushaei/2014/10/20/12-surprising-job-interview-tips/#5079284e50f4">12 Surprising Job Interview Tips</a></li>
@@ -103,9 +93,11 @@
 						<li><a href="https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success">The Ultimate Interview Guide: 30 Prep Tips for Job Interview Success</a></li>
 						<li><a href="https://www.glassdoor.com/blog/reddit-life-pro-tips/">25 Reddit Life Pro Tips That’ll Help You Hack Your Career</a></li>
 					</ul>
-			</div>
+				</div>
+				</div>
+				
 
-		</div>
+			</div>
 		</div>
 
 	</div> <!-- /.container -->
@@ -123,6 +115,7 @@
 <!-- JavaScript -->
 <script type="text/javascript" src="./assets/javascript/materialize.js"></script>
 <script type="text/javascript" src="./assets/javascript/submit.js"></script>
+<script type="text/javascript" src="./assets/javascript/results.js"></script>
 
 </body>
 </html>
