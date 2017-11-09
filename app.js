@@ -13,18 +13,18 @@
      fr.onload = function(e) {
       console.log("LOADED")
       $("#preview").attr("src", e.target.result);
-      console.log('http://cl-api.vize.ai/3226?image='+$("#preview").attr("src"))
+      console.log('http://cl-api.vize.ai/3313?image='+$("#preview").attr("src"))
 
 
        var image = new FormData();
       image.append("image", selectedFile);
 
 
-      axios.post('http://cl-api.vize.ai/3226', image,
+      axios.post('http://cl-api.vize.ai/3313', image,
 
              {
                  "headers": {
-                     "Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjMxMTEsImlhdCI6MTUwOTY3MTk0NSwiZXhwIjoxNTE3NDQ3OTQ1fQ.129m04WJfU5UazJxPHFw-1HiC7yUQtnfMbv3BWleHGY",
+                     "Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjMxODQsImlhdCI6MTUxMDEwNjQ2MiwiZXhwIjoxNTE3ODgyNDYyfQ.w4vK7xPw-Fff7vWbKGFe1AqB-2Od-lCnsR8KHU3bVow",
                  }
              }
          )
