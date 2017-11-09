@@ -54,7 +54,7 @@ table {
 
 /* flashes new table row on load */
 .flash {
-    animation: flash 3s;
+    animation: flash 4s;
     animation-iteration-count: 1;
   }
 
