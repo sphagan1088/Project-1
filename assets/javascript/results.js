@@ -13,11 +13,6 @@ firebase.initializeApp(config);
 // GLOBAL VARIABLES
 // ====================================================================================
 var database = firebase.database();
-var userName = "";
-var userCompany = "";
-var userDressCode = "";
-var userIndustry = "";
-var userOutfit = "";
 
 
 // FUNCTIONS
@@ -149,7 +144,7 @@ database.ref().once("value", function(snapshot) {
     // hide rows past row 5
     hideRows();
 
-    // error handling
+// error handling
 }, function(err) {
     console.error(err);
 });
@@ -163,16 +158,18 @@ database.ref().on("child_added", function(snapshot) {
     // display user outfit img
     displayImg(snapshot);
 
-    // flash user's new row on results page
-    $(".new-row:first-child").addClass("flash");
-
-    // error handling
+// error handling
 }, function(err) {
     console.error(err);
 });
 
 // only console out most recent object from firebase
-firebase.database().ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+
     // console insight
     console.log(snapshot.val());
+
+// error handling
+}, function (err) {
+    console.error(err);
 });
