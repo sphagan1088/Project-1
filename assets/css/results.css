@@ -77,13 +77,13 @@ table {
 
 /* flashes new table row on load */
 .flash {
-    animation: flash 1s;
-    animation-iteration-count: 3;
+    animation: flash 1.5s;
+    animation-iteration-count: 2;
   }
 
 @keyframes flash {
     0% { background-color: none; }
-    50% { background-color: #039be5; }
+    50% { background-color: #e0f7fa; }
     100% { background-color: none; }
 }
 
