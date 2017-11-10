@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 25px 0;
+}
+
+#back-btn {
+	background: none;
+	color: black;
+	padding-left: 0;
+}
+
+h1 {
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-left: 8px;
+	font-family: 'Lobster', 'Roboto', sans-serif;
+	letter-spacing: 1.5px;
+}
+
+#outfit-result {
+	color: #009688;
+}
+
+.card-panel {
+	padding: 30px 50px;
+	margin-bottom: 40px;
+}
+
+#img-div {
+	position:relative;
+}
+
+.modal-trigger {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#outfit-img {
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+
+#modal-btn:hover {
+	background: #4db6ac;
+}
+
+table {
+	margin-bottom: 35px;
+}
+
+p {
+	margin-bottom: 0;
+	font-weight: 600;
+}
+
+ul {
+	margin-top: 0;
+}
+
+a {
+	color: #999;
+}
+
+a:hover {
+	color: #40c4ff;
+}

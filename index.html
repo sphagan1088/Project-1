@@ -10,7 +10,8 @@
 
 	<!-- Materialize CSS -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-	
+	<!-- Font Awesome -->
+	<script src="https://use.fontawesome.com/66533346b7.js"></script>
 	<!-- Materialize Icons -->
   	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -24,10 +25,16 @@
 </head>
 <body>
 
-	<!-- LANDING PAGE -->
+	<!-- LOADING CONTENT -->
+	<div class="container" id="loading" style="display:none">
+		<p id="loading-message">Scanning outfit...</p>
+		<i id="loading-icon" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+	</div>
+	
+	<!-- MAIN -->
 	<div class="container">
 		
-		<div class="row">
+		<div class="row" id="main">
 			
 			<div class="col s12 m4 offset-m1" id="header">
 				<h1>Starched</h1>
@@ -43,20 +50,21 @@
 					<div class="input-field col s12" id="name-input-field">
 						<i class="material-icons prefix">face</i>
 						<label for="name">Name</label>
-						<input type="text" id="name" class="validate" />
+						<input type="text" id="name" class="validate" required/>
+						<span id="name-validation" class="red" style="display:none">Please input a Name<span>
 					</div>
 					
 					<!-- Company -->
 					<div class="input-field col s12" id="company-input-field">
 						<i class="material-icons prefix">business</i>
 						<label for="company">Company you're interviewing for</label>
-						<input type="text" id="company" class="validate" />
+						<input type="text" id="company" class="validate" required/>
 					</div>
 					
 					<!-- Dress Code -->
 					<div class="input-field col s12">
 						<i class="material-icons prefix">wc</i>
-						<select id="dress-code">
+						<select id="dress-code" required>
 					    	<option value="" disabled selected>Company's dress code</option>
 					      	<option value="Formal">Formal</option>
 					      	<option value="Business casual">Business casual</option>
@@ -70,27 +78,38 @@
 						<!-- <i class="material-icons prefix">business_center</i> -->
 						<i class="material-icons prefix">card_travel</i>
 						<label for="industry">Job industry</label>
-						<input type="text" id="industry" class="validate" />
+						<input type="text" id="industry" class="validate" required/>
 					</div>
 					
 					<!-- Upload Image -->
-					<div class="file-field input-field col s12">
+					<div class="file-field input-field col s12" id="outfit-input-field">
 						<div class="btn" id="file-btn">
 							<span><i class="material-icons prefix">attach_file</i></span>
-							<input type="file" />
+							<input id="file-input" type="file" required />
 						</div>
 						<div class="file-path-wrapper">
 				        	<input id="outfit" class="file-path validate" type="text" placeholder="Upload a full-body image of your outfit"/>
 				      	</div>
 					</div>
-
-					<!-- Submit -->
-					<button class="btn waves-effect waves-light" type="submit" id="submit"><a href="./loading.html">Submit</a>
-					</button>
+					
+					<div class="row">
+						<!-- Submit -->
+						<button class="btn waves-effect waves-light" type="submit" id="submit" data-target="modal1">Submit</button>
+					</div>
 				</div>
 			</form>
 			<!-- Form End -->
 
+		</div>
+
+		<!-- Form Validation Modal -->
+		<div id="modal1" class="modal bottom-sheet">
+		    <div class="modal-content">
+		      	<p>Please fill out all fields!</p>
+		    </div>
+		    <div class="modal-footer">
+		      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
+		    </div>
 		</div>
 
 	</div> <!-- /.container -->
@@ -107,8 +126,9 @@
 
 <!-- JavaScript -->
 <script type="text/javascript" src="./assets/javascript/materialize.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="./assets/javascript/submit.js"></script>
-<script type="text/javascript" src="./assets/javascript/app.js"></script>
+
 
 </body>
 </html>

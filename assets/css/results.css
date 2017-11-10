@@ -1,5 +1,12 @@
+/*------------
+	GENERAL
+-------------*/
 * {
 	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
 }
 
 body {
@@ -12,6 +19,10 @@ body {
 	padding-left: 0;
 }
 
+
+/*------------
+	HEADER
+-------------*/
 h1 {
 	font-weight: 600;
 	margin-bottom: 0;
@@ -24,22 +35,24 @@ h1 {
 	color: #009688;
 }
 
+
+/*-------------
+	CONTENT
+--------------*/
 .card-panel {
 	padding: 30px 50px;
 	margin-bottom: 40px;
 }
 
-#img-div {
-	position:relative;
+
+/*-----------
+	Image
+------------*/
+#preview-div {
+	position: relative;
 }
 
-.modal-trigger {
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-#outfit-img {
+#outfit-preview {
 	margin-top: 20px;
 	margin-bottom: 35px;
 }
@@ -48,24 +61,45 @@ h1 {
 	background: #4db6ac;
 }
 
+#modal-btn {
+	position: absolute;
+	top: 0;
+	right: -15px;
+}
+
+
+/*-----------
+	Table
+------------*/
 table {
-	margin-bottom: 85px;
+	margin-bottom: 55px;
 }
 
 /* flashes new table row on load */
 .flash {
-    animation: flash 4s;
-    animation-iteration-count: 1;
+    animation: flash 1s;
+    animation-iteration-count: 3;
   }
 
 @keyframes flash {
-    0% { color: none; }
-    50% { color: #039be5; }
-    100% { color: none; }
+    0% { background-color: none; }
+    50% { background-color: #039be5; }
+    100% { background-color: none; }
 }
 
+/*-----------
+	Image
+------------*/
+#google-maps {
+	margin-bottom: 40px;
+}
+
+
+/*---------------
+	Resources
+----------------*/
 #resources {
-	margin-top: 20px;
+	margin-top: -20px;
 	margin-left: 15px;
 }
 

@@ -1,3 +1,6 @@
+/*------------
+	GENERAL
+-------------*/
 * {
 	box-sizing: border-box;
 }
@@ -10,6 +13,25 @@ body {
 	width: 82%;
 }
 
+#loading {
+	position:relative;
+}
+
+#loading-message {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+#loading-icon {
+	position: absolute;
+	top: -20px;
+	left: -55px;
+}
+
+
+/*------------
+	HEADER
+-------------*/
 h1 {
 	font-weight: 600;
 	font-size: 70px;
@@ -34,8 +56,16 @@ p {
 	width: 80%;
 }
 
+
+/*------------
+	CONTENT
+-------------*/
 form {
 	margin-top: 25px;
+}
+
+#name-validation {
+	color: red;
 }
 
 /* valid color */
@@ -71,11 +101,15 @@ form {
 	background: #26a69a;
 }
 
-#submit {
+#submit, #results-btn {
 	padding: 0 1rem;
 	margin-left: 10px;
 	margin-top: 20px;
 	background: #009688;
+}
+
+#submit {
+	margin-left: 20px;
 }
 
 a {

@@ -33,7 +33,7 @@
 		
 		<!-- Result Header -->
 		<div class="row">
-			<h1>Result: <span id="outfit-result">Formal</span></h1>
+			<h1>Result: <span id="outfit-result"></span></h1>
 		</div>
 		
 		<!-- Content -->
@@ -41,23 +41,25 @@
 			<div class="row">
 				<div class="col s12 m4" id="img-div">
 
-					<!-- Modal Trigger -->
-					<a id="modal-btn" class="waves-effect waves-light btn-floating modal-trigger" href="#modal1"><i class="material-icons">sentiment_very_satisfied</i></a>
-					<!-- clear_all, crop_free, menu, add, donut_large, insert_emoticon, more_horiz -->
-
 					<!-- Modal Structure -->
 					<div id="modal1" class="modal">
 					    <div class="modal-content">
-					    	<p>Sweet! <!-- <i class="material-icons">pan_tool</i> --> Rock this outfit at your next interview, and you'll be sure to impress. Good luck!</p>
+					    	<p id="formal-message" style="display:none">Sweet! <!-- <i class="material-icons">pan_tool</i> --> Rock this outfit at your next interview, and you'll be sure to impress. Good luck!</p>
+					    	<p id="casual-message" style="display:none">Hmm...maybe not the best outfit to make a great professional impression. But that's what we're here for! Check out the clothing stores near you on the map below to help you rock that interview.</p>
 					    </div>
 					    <div class="modal-footer">
 					      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
 					    </div>
 					</div>
+					
+					<div id="preview-div">
+						<!-- Modal Trigger -->
+						<a id="modal-btn" class="waves-effect waves-light btn-floating modal-trigger" href="#modal1"><i class="material-icons" id="happy-face" style="display:none">sentiment_very_satisfied</i>
+						<i class="material-icons" id="sad-face" style="display:none">sentiment_very_dissatisfied</i></a>
+						<!-- clear_all, crop_free, menu, add, donut_large, insert_emoticon, more_horiz -->
 
-					<!-- User's Image Here -->
-					<div id="img-div">
-						<img class="responsive-img" id="outfit-img" src="http://via.placeholder.com/500x850" alt="placeholder">
+						<!-- User's Image Here -->
+						<img id="outfit-preview" class="responsive-img" src="" />
 					</div>
 
 				</div>
@@ -79,7 +81,8 @@
 				</div>
 				
 				<!-- Google Maps Embed API -->
-				<iframe
+				<iframe style="display:none"
+					id="google-maps"
 					class="col s12 responsive-iframe"
 					width="600"
 				  	height="450"
@@ -121,9 +124,9 @@
 
 <!-- JavaScript -->
 <script type="text/javascript" src="./assets/javascript/materialize.js"></script>
-<script type="text/javascript" src="./assets/javascript/submit.js"></script>
-<!-- <script type="text/javascript" src="./assets/javascript/results.js"></script> -->
-<script type="text/javascript" src="./assets/javascript/app.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="./assets/javascript/results.js"></script>
+
 
 </body>
 </html>
