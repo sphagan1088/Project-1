@@ -32,19 +32,19 @@ var userOutfit = "";
 
 function requestVizeAPI() {
 
-	// if all fields are not filled out
-	 userName = $("#name").val();
-				    userCompany = $("#company").val();
-				    userDressCode = $("#dress-code").val();
-				    userIndustry = $("#industry").val();
-				    userOutfit = $("#outfit").val();
+	// capture all user input
+ 	userName = $("#name").val();
+    userCompany = $("#company").val();
+    userDressCode = $("#dress-code").val();
+    userIndustry = $("#industry").val();
+    userOutfit = $("#outfit").val();
+
+    // if all fields are not filled out
 	if (userName === "" ||
 		userCompany === "" ||
-		userDressCode === "" ||
+		userDressCode === null ||
 		userIndustry === "" ||
 		userOutfit === "") {
-		debugger;
-		console.log("problemo")
 		// trigger modal
         $('#submit').addClass("modal-trigger");
     }
