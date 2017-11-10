@@ -137,22 +137,14 @@ function hideRows() {
 
 // MAIN PROCESS
 // ====================================================================================
-$(window).on("change", function() {
-
-    // flash user's new row on results page
-    $(".new-row:first-child").addClass("flash");
-
-    setTimeout(function(){ 
-        $(".new-row:first-child").removeClass("flash");
-    }, 1000);
-
-})
-
 // when page loads
 database.ref().once("value", function(snapshot) {
 
     // initialize table
     initPage(snapshot);
+
+    // flash user's new row on results page
+    $(".new-row:first-child").addClass("flash");
 
     // hide rows past row 5
     hideRows();
