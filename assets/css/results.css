@@ -77,8 +77,8 @@ table {
 
 /* flashes new table row on load */
 .flash {
-    animation: flash 1.5s;
-    animation-iteration-count: 2;
+    animation: flash 1s;
+    animation-iteration-count: 3;
   }
 
 @keyframes flash {
