@@ -57,9 +57,8 @@ function requestVizeAPI() {
 	    var fr = new FileReader();
 	    fr.onload = function(e) {
 	        console.log("LOADED");
-	        $("#preview").attr("src", e.target.result);
-	        // capture push function so that myKey returns the key of the specific object pushed
-	        console.log('http://cl-api.vize.ai/3313?image=' + $("#preview").attr("src"));
+	        // $("#preview").attr("src", e.target.result);
+	        // console.log('http://cl-api.vize.ai/3313?image=' + $("#preview").attr("src"));
 
 	        var image = new FormData();
 	        image.append("image", selectedFile);
@@ -97,7 +96,8 @@ function requestVizeAPI() {
 			            outfitResult: userResult,
 			            imgb64: e.target.result,
 			            timestamp: firebase.database.ServerValue.TIMESTAMP
-			        }
+					}
+					// capture push function so that myKey returns the key of the specific object pushed
 			        var myKey = database.ref().push(pushObject);
 
 	                // redirect to results page & when api call is done append file parameters to URL

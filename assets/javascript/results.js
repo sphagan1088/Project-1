@@ -62,6 +62,7 @@ function initPage(snapshotObject) {
 // function to display appropriate results to DOM
 function displayCorrectResults(snapshotObject) {
 
+	// capture whether result is "Formal" or "Casual" from firebase
 	var snapshotResult = snapshotObject.val().outfitResult;
 
 	// display correct outfit result
@@ -80,8 +81,13 @@ function displayCorrectResults(snapshotObject) {
 
 // function to display user img to DOM
 function displayImg(snapshotObject) {
+
+	// capture 64-bit image data from firebase
 	var snapshotImg = snapshotObject.val().imgb64;
+
+	// set as src of img attr
 	$("#outfit-preview").attr("src", snapshotImg);
+
 }
 
 // function to display google maps if result is casual
@@ -96,7 +102,7 @@ function displayGoogleMaps(result) {
 
 }
 
-// function to display sad face or happy face in modal button based on result
+// function to display sad face or happy face icon based on result
 function displayModalBtnIcon(result) {
 
 	if (result === "Formal") {
@@ -124,7 +130,7 @@ function displayModalMessage(result) {
 
 }
 
-// function for hiding rows once data storage gets past 5 people
+// function for hiding rows on DOM once data storage gets past 5 objects
 function hideRows() {
     $(".new-row").slice(5).css("display", "none");
 }
@@ -152,7 +158,7 @@ database.ref().once("value", function(snapshot) {
 // whenever a new object is pushed to firebase
 database.ref().on("child_added", function(snapshot) {
 
-    // display outfit result
+    // display correct results to DOM
     displayCorrectResults(snapshot);
 
     // display user outfit img
