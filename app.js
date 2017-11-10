@@ -43,28 +43,3 @@
  })
 
 
-
- // var fs = require("fs");
- // var unirest = require("unirest");
-
- // var req = unirest("POST", "http://cl-api.vize.ai/3226");
-
- // req.headers({
- //   "postman-token": "171a1e2f-5edb-c07b-a8d1-e4eb4353ae01",
- //   "cache-control": "no-cache",
- //   "content-type": "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
- //   "accept": "text/plain",
- //   "authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjMxMTEsImlhdCI6MTUwOTY3MTk0NSwiZXhwIjoxNTE3NDQ3OTQ1fQ.129m04WJfU5UazJxPHFw-1HiC7yUQtnfMbv3BWleHGY"
- // });
-
- // req.multipart([
- //   {
- //     "body": fs.createReadStream("C:\\Users\\sphag\\Desktop\\Project\\Winter\\1.jpg")
- //   }
- // ]);
-
- // req.end(function (res) {
- //   if (res.error) throw new Error(res.error);
-
- //   console.log(res.body);
- // });
