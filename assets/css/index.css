@@ -1,3 +1,6 @@
+/*------------
+	GENERAL
+-------------*/
 * {
 	box-sizing: border-box;
 }
@@ -10,6 +13,25 @@ body {
 	width: 82%;
 }
 
+#loading {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -50px;
+
+}
+
+#loading-icon {
+	position: absolute;
+	top: -20px;
+	left: -60px;
+}
+
+
+/*------------
+	HEADER
+-------------*/
 h1 {
 	font-weight: 600;
 	font-size: 70px;
@@ -34,8 +56,16 @@ p {
 	width: 80%;
 }
 
+
+/*------------
+	CONTENT
+-------------*/
 form {
 	margin-top: 25px;
+}
+
+#name-validation {
+	color: red;
 }
 
 /* valid color */
@@ -56,6 +86,12 @@ form {
     box-shadow: 0 1px 0 0 #4db6ac;
 }
 
+/* valid color */
+#outfit-input-field input[type=text].valid {
+   	border-bottom: 1px solid #009688;
+    box-shadow: 0 1px 0 0 #009688;
+}
+
 .btn {
 	border-radius: 3px;
 }
@@ -65,11 +101,15 @@ form {
 	background: #26a69a;
 }
 
-#submit {
+#submit, #results-btn {
 	padding: 0 1rem;
 	margin-left: 10px;
 	margin-top: 20px;
 	background: #009688;
+}
+
+#submit {
+	margin-left: 20px;
 }
 
 a {
