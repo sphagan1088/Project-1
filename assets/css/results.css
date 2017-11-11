@@ -120,3 +120,7 @@ a {
 a:hover {
 	color: #4fc3f7;
 }
+
+a:visited {
+	color: #4fc3f7;
+}
