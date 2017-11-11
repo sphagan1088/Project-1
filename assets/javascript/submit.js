@@ -65,7 +65,7 @@ function requestVizeAPI() {
 			image.append("image", selectedFile);
 
 
-			axios.post('http://cl-api.vize.ai/3313', image,
+			axios.post('https://cl-api.vize.ai/3313', image,
 
 				{
 					"headers": {
