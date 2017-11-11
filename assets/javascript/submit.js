@@ -4,7 +4,11 @@ var config = {
 	authDomain: "project-1-8e126.firebaseapp.com",
 	databaseURL: "https://project-1-8e126.firebaseio.com",
 	projectId: "project-1-8e126",
+<<<<<<< HEAD
 	storageBucket: "project-1-8e126.appspot.com",
+=======
+	storageBucket: "",
+>>>>>>> fefa7c3c6669c293e3e78dabf6dfb97049bcb187
 	messagingSenderId: "704064336079"
 };
 firebase.initializeApp(config);
@@ -22,6 +26,7 @@ var userOutfit = "";
 
 // FUNCTIONS
 // ====================================================================================
+<<<<<<< HEAD
 
 // console.log(JSON.stringify(image));
 // $('#file-input').change(function(event) {
@@ -112,10 +117,13 @@ function requestVizeAPI() {
 	    // })
 	}
 };
+=======
+>>>>>>> fefa7c3c6669c293e3e78dabf6dfb97049bcb187
 
 
 // MAIN PROCESS
 // ====================================================================================
+<<<<<<< HEAD
 // when user clicks submit, execute submit function
 $("#submit").on("click", function(e) {
 
@@ -124,3 +132,5 @@ $("#submit").on("click", function(e) {
     requestVizeAPI();
 
 });
+=======
+>>>>>>> fefa7c3c6669c293e3e78dabf6dfb97049bcb187
