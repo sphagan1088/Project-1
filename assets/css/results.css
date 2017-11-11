@@ -53,7 +53,7 @@ h1 {
 }
 
 #outfit-preview {
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 35px;
 }
 
@@ -63,7 +63,7 @@ h1 {
 
 #modal-btn {
 	position: absolute;
-	top: 0;
+	top: 10px;
 	right: -15px;
 }
 
@@ -73,6 +73,7 @@ h1 {
 ------------*/
 table {
 	margin-bottom: 55px;
+	margin-left: -10px;
 }
 
 /* flashes new table row on load */

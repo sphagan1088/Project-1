@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyAllfQG9oAzeZk-W_f3aW_f3dYw6Axq4gk",
-    authDomain: "project-1-8e126.firebaseapp.com",
-    databaseURL: "https://project-1-8e126.firebaseio.com",
-    projectId: "project-1-8e126",
-    storageBucket: "",
-    messagingSenderId: "704064336079"
+	apiKey: "AIzaSyAllfQG9oAzeZk-W_f3aW_f3dYw6Axq4gk",
+	authDomain: "project-1-8e126.firebaseapp.com",
+	databaseURL: "https://project-1-8e126.firebaseio.com",
+	projectId: "project-1-8e126",
+	storageBucket: "project-1-8e126.appspot.com",
+	messagingSenderId: "704064336079"
 };
 firebase.initializeApp(config);
 
@@ -23,7 +23,7 @@ var userOutfit = "";
 // FUNCTIONS
 // ====================================================================================
 
-// //console.log(JSON.stringify(image));
+// console.log(JSON.stringify(image));
 // $('#file-input').change(function(event) {
 //   	console.log(event.target.files);
 //     var tmppath = URL.createObjectURL(event.target.files[0]);
@@ -52,27 +52,27 @@ function requestVizeAPI() {
     	$("#submit").removeClass("modal-trigger");
 	    $("#loading").show();
 	    $("#main").hide();
-	    var selectedFile = document.getElementById('file-input').files[0];
-	    var path = URL.createObjectURL(selectedFile);
-	    var fr = new FileReader();
-	    fr.onload = function(e) {
-	        console.log("LOADED");
-	        // $("#preview").attr("src", e.target.result);
-	        // console.log('http://cl-api.vize.ai/3313?image=' + $("#preview").attr("src"));
-
-	        var image = new FormData();
-	        image.append("image", selectedFile);
-	        console.log(image);
+		var selectedFile = document.getElementById('file-input').files[0];
+		var path = URL.createObjectURL(selectedFile);
+		var fr = new FileReader();
+		fr.onload = function (e) {
+			console.log("LOADED");
+			// $("#preview").attr("src", e.target.result);
+			// console.log('http://cl-api.vize.ai/3313?image=' + $("#preview").attr("src"));
 
 
-	        axios.post('http://cl-api.vize.ai/3313', image,
+			var image = new FormData();
+			image.append("image", selectedFile);
 
-	                {
-	                    "headers": {
-	                        "Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjMxODQsImlhdCI6MTUxMDEwNjQ2MiwiZXhwIjoxNTE3ODgyNDYyfQ.w4vK7xPw-Fff7vWbKGFe1AqB-2Od-lCnsR8KHU3bVow",
-	                    }
-	                }
-	            )
+
+			axios.post('http://cl-api.vize.ai/3313', image,
+
+				{
+					"headers": {
+						"Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjMxODQsImlhdCI6MTUxMDEwNjQ2MiwiZXhwIjoxNTE3ODgyNDYyfQ.w4vK7xPw-Fff7vWbKGFe1AqB-2Od-lCnsR8KHU3bVow",
+					}
+				}
+			)
 	            .then(function(response) {
 	                console.log(response);
 	                console.log(response.data.prediction);
@@ -84,9 +84,6 @@ function requestVizeAPI() {
 				    userIndustry = $("#industry").val();
 				    userResult = response.data.prediction;
 
-				    // create array from inputs to be used by displayNewRow function
-				    var userArray = [userName, userCompany, userDressCode, userIndustry, userResult];
-
 			        // create object to push to firebase
 			        var pushObject = {
 			            name: userName,
@@ -97,18 +94,19 @@ function requestVizeAPI() {
 			            imgb64: e.target.result,
 			            timestamp: firebase.database.ServerValue.TIMESTAMP
 					}
+
 					// capture push function so that myKey returns the key of the specific object pushed
 			        var myKey = database.ref().push(pushObject);
 
 	                // redirect to results page & when api call is done append file parameters to URL
-	                window.location = "results.html?id=" + myKey.key + "&dressType=" + response.data.prediction;
+	                window.location = "./results.html?id=" + myKey.key + "&dressType=" + response.data.prediction;
 
 	            })
 	            .catch(function(error) {
 	                console.log(error);
 	            });
 	    }
-	    fr.readAsDataURL(selectedFile)
+	    fr.readAsDataURL(selectedFile);
 	    // fr.error(function(err) {
 
 	    // })

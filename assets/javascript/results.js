@@ -4,7 +4,7 @@ var config = {
 	authDomain: "project-1-8e126.firebaseapp.com",
 	databaseURL: "https://project-1-8e126.firebaseio.com",
 	projectId: "project-1-8e126",
-	storageBucket: "",
+	storageBucket: "project-1-8e126.appspot.com",
 	messagingSenderId: "704064336079"
 };
 firebase.initializeApp(config);
@@ -27,7 +27,8 @@ function displayNewRow(array) {
     for (var i = 0; i < array.length; i++) {
 
         // append its table data to the virtual row
-        newRow.append("<td>" + array[i] + "</td>");
+		newRow.append("<td>" + array[i] + "</td>");
+		
     }
 
     // append the row to the DOM
