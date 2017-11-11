@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<meta charset="UTF-8">
+		
+	<title>Project 1</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Open+Sans+Condensed:300,700|Montserrat:400,500,600,700" rel="stylesheet">
+
+	<!-- Materialize CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	
+	<!-- Materialize Icons -->
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/results.css">
+	
+	<!-- Mobile responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+
+	<!-- RESPONSE PAGE (FORMAL) -->
+	
+	<!-- Button to go back to landing page -->
+	<a href="./index.html"><button id="back-btn" class="btn right tooltipped z-depth-0" data-position="left" data-delay="10" data-tooltip="Try out another outfit" data-tooltip-id="5f348ca7-14d2-6cb5-ce85-fedc730c9f38"><i class="material-icons">refresh</i></button></a>
+	
+	<div class="container">
+		
+		<!-- Result Header -->
+		<div class="row">
+			<h1>Result: <span id="outfit-result"></span></h1>
+		</div>
+		
+		<!-- Content -->
+		<div class="card-panel">
+			<div class="row">
+				<div class="col s12 m4" id="img-div">
+
+					<!-- Modal Structure -->
+					<div id="modal1" class="modal">
+					    <div class="modal-content">
+					    	<p id="formal-message" style="display:none">Sweet! <!-- <i class="material-icons">pan_tool</i> --> Rock this outfit at your next interview, and you'll be sure to impress. Good luck!</p>
+					    	<p id="casual-message" style="display:none">Hmm...maybe not the best outfit to make a great professional impression. But that's what we're here for! Check out the clothing stores near you on the map below to help you rock that interview.</p>
+					    </div>
+					    <div class="modal-footer">
+					      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
+					    </div>
+					</div>
+					
+					<div id="preview-div">
+						<!-- Modal Trigger -->
+						<a id="modal-btn" class="waves-effect waves-light btn-floating modal-trigger" href="#modal1"><i class="material-icons" id="happy-face" style="display:none">sentiment_very_satisfied</i>
+						<i class="material-icons" id="sad-face" style="display:none">sentiment_very_dissatisfied</i></a>
+						<!-- clear_all, crop_free, menu, add, donut_large, insert_emoticon, more_horiz -->
+
+						<!-- User's Image Here -->
+						<img id="outfit-preview" class="responsive-img" src="" />
+					</div>
+
+				</div>
+				
+				<!-- Table for User Data -->
+				<div class="col s12 m7 offset-m1">
+					<table class="highlight responsive-table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Company</th>
+								<th>Dress Code</th>
+								<th>Industry</th>
+								<th>Outfit Result</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+				
+				<!-- Google Maps Embed API -->
+				<iframe style="display:none"
+					id="google-maps"
+					class="col s12 responsive-iframe"
+					width="600"
+				  	height="450"
+				  	frameborder="0" style="border:0"
+				  	src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBXp5DuWNEBz3mzlXXzfAlVk5rS-ocV6vM
+				    &q=clothing+stores+near+me" allowfullscreen>
+				</iframe>
+				
+				<!-- Interview Resources -->
+				<div class="row">
+					<div class="col s12" id="resources">
+						<p>Psst...make sure to check out these helpful resources!</p>
+						<ul>
+							<li><a href="https://www.forbes.com/sites/jonyoushaei/2014/10/20/12-surprising-job-interview-tips/#5079284e50f4" target="_blank">12 Surprising Job Interview Tips</a></li>
+							<li><a href="https://www.forbes.com/sites/jacquelynsmith/2013/01/11/how-to-ace-the-50-most-common-interview-questions/#3189bc764624" target="_blank">How to Ace the 50 Most Common Interview Questions</a></li>
+							<li><a href="https://www.forbes.com/sites/quora/2017/11/03/9-interview-tips-that-will-help-you-land-the-job/#776925d13153" target="_blank">9 Interview Tips That Will Help You Land the Job</a></li>
+							<li><a href="https://www.reddit.com/r/AskReddit/comments/1cxpq8/what_are_the_dos_and_donts_of_a_job_interview/" target="_blank">What Are the Dos and Don'ts of A Job Interview?</a></li>
+							<li><a href="https://theundercoverrecruiter.com/interviewing-tips-from-hiring-managers/" target="_blank">10 Awesome Interview Tips from Actual Hiring Managers</a></li>
+							<li><a href="https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success" target="_blank">The Ultimate Interview Guide: 30 Prep Tips for Job Interview Success</a></li>
+							<li><a href="https://www.glassdoor.com/blog/reddit-life-pro-tips/" target="_blank">25 Reddit Life Pro Tips That’ll Help You Hack Your Career</a></li>
+						</ul>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+
+	</div> <!-- /.container -->
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<!-- Firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+
+<!-- JavaScript -->
+<script type="text/javascript" src="./assets/javascript/materialize.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<script type="text/javascript" src="./assets/javascript/results.js"></script>
+
+
+</body>
+</html>

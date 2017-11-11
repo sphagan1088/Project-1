@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+		
+	<title>Project 1</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Open+Sans+Condensed:300,700|Montserrat:400,500,600,700" rel="stylesheet">
+
+	<!-- Materialize CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<!-- Materialize Icons -->
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+	
+	<!-- Mobile Responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	
+</head>
+<body>
+
+	<!-- LOADING CONTENT -->
+	<div class="container valign-wrapper" id="loading" style="display:none">
+		<p id="loading-message">Scanning outfit...</p>
+		<i id="loading-icon" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+	</div>
+	
+	<!-- MAIN -->
+	<div class="container">
+		
+		<div class="row" id="main">
+			
+			<div class="col s12 m4 offset-m1" id="header">
+				<h1>Starched</h1>
+				<p>The easiest part of the job search should be getting dressed to impress. We're here to help you separate the dressy from the messy.</p>
+			</div>
+			
+			<!-- Form Start -->
+			<form class="col s12 m6">
+				<h4>Give us some background:</h4>
+				<div class="row">
+
+					<!-- Name -->
+					<div class="input-field col s12" id="name-input-field">
+						<i class="material-icons prefix">face</i>
+						<label for="name">Name</label>
+						<input type="text" id="name" class="validate" required/>
+						<span id="name-validation" class="red" style="display:none">Please input a Name<span>
+					</div>
+					
+					<!-- Company -->
+					<div class="input-field col s12" id="company-input-field">
+						<i class="material-icons prefix">business</i>
+						<label for="company">Company you're interviewing for</label>
+						<input type="text" id="company" class="validate" required/>
+					</div>
+					
+					<!-- Dress Code -->
+					<div class="input-field col s12">
+						<i class="material-icons prefix">wc</i>
+						<select id="dress-code" required>
+					    	<option value="" disabled selected>Company's dress code</option>
+					      	<option value="Formal">Formal</option>
+					      	<option value="Business casual">Business casual</option>
+					      	<option value="Casual">Casual</option>
+					      	<option value="Unknown">Don't know</option>
+					    </select>
+					</div>
+
+					<!-- Industry -->
+					<div class="input-field col s12" id="industry-input-field">
+						<!-- <i class="material-icons prefix">business_center</i> -->
+						<i class="material-icons prefix">card_travel</i>
+						<label for="industry">Job industry</label>
+						<input type="text" id="industry" class="validate" required/>
+					</div>
+					
+					<!-- Upload Image -->
+					<div class="file-field input-field col s12" id="outfit-input-field">
+						<div class="btn tooltipped" id="file-btn" data-position="right" data-delay="10" data-tooltip="Image may need to be resized to 100KB or lower (www.imageoptimizer.net)">
+							<span><i class="material-icons prefix">attach_file</i></span>
+							<input id="file-input" type="file" required />
+						</div>
+						<div class="file-path-wrapper">
+				        	<input id="outfit" class="file-path validate" type="text" placeholder="   Upload a full-body image of your outfit"/>
+				      	</div>
+					</div>
+					
+					<div class="row">
+						<!-- Submit -->
+						<button class="btn waves-effect waves-light" type="submit" id="submit" data-target="modal1">Submit</button>
+					</div>
+				</div>
+			</form>
+			<!-- Form End -->
+
+		</div>
+
+		<!-- Form Validation Modal -->
+		<div id="modal1" class="modal bottom-sheet">
+		    <div class="modal-content">
+		      	<p>Please fill out all fields!</p>
+		    </div>
+		    <div class="modal-footer">
+		      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
+		    </div>
+		</div>
+
+	</div> <!-- /.container -->
+
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/66533346b7.js"></script>
+	
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<!-- Firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+
+<!-- JavaScript -->
+<script type="text/javascript" src="./assets/javascript/materialize.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="./assets/javascript/submit.js"></script>
+
+
+</body>
+</html>
